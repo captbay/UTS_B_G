@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Perpustakaan</title>
+    <title>Registrasi</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/fee4f29424.js" crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,26 +20,22 @@
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container">
                 <!-- Nama : nama panggilan kalian -->
-                <a class="navbar-brand fw-bold" href="/GD4_B_0994">Perpustakaan</a>
+                <a class="navbar-brand fw-bold" href="/GD4_B_0994">Perpustakaan : Registrasi</a>
             </div>
         </nav>
     </header>
     <main>
-        <div class="bg">
-            <div class="container">
-                <div class="pt-5 mt-4">
-                    <h1 class="text-center align-middle text-white"
-                        style="font-size: 70px;font-style: oblique;text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">
-                        <b>
-                            Selamat Datang <br> di<br> Perpustakaan</b>
-                    </h1>
-                </div>
-            </div>
-            <div class="container" style="padding-top: 100px;">
-                <div class="card text-white bg-dark ma-5 shadow" style="min-width:400px; max-width: 550px;">
-                    <div class="card-header fw-bold text-center">Login</div>
+        <div class="bg bg-light text-dark">
+            <div class="container mt-5 d-flex align-items-center justify-content-center">
+                <div class="card text-white bg-dark ma-5 shadow " style="min-width:
+25rem;">
+                    <div class="card-header fw-bold">Register</div>
                     <div class="card-body">
-                        <form action="./process/loginProcess.php" method="post">
+                        <form action="../process/registerProcess.php" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="formlabel">Name</label>
+                                <input class="form-control" id="nama" name="nama" aria-describedby="emailHelp">
+                            </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="formlabel">Email</label>
                                 <input class="form-control" id="email" name="email" aria-describedby="emailHelp">
@@ -49,13 +45,17 @@
                                 <input type="password" class="form-control" id="myInputPass" name="password">
                                 <input type="checkbox" onclick="myFunction()"> Show Password
                             </div>
+                            <div class="mb-3">
+                                <label for="exampleInputImages" class="formlabel">Upload Foto Profile</label>
+                                <input class="form-control" type="file" name="gambar">
+                            </div>
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary" name="login">Login</button>
+                                <button type="submit" class="btn btn-primary" name="register">Register</button>
                             </div>
                         </form>
-                        <p class="mt-2 mb-0">Belum punya akun? <a href="./page/registerPage.php"
-                                class="textprimary">Klik
-                                disini!</a></p>
+                        <p class="mt-2 mb-0">Have an account? <a href="../index.php" class="text-primary">Login
+                                here!</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
     <footer>
         <!-- place footer here -->
     </footer>
-
+    </script>
     <script>
     function myFunction() {
         var x = document.getElementById("myInputPass");
