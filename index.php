@@ -16,15 +16,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <!-- Nama : nama panggilan kalian -->
-                <a class="navbar-brand fw-bold" href="/GD4_B_0994">Perpustakaan</a>
-            </div>
-        </nav>
-    </header>
     <main>
+
         <div class="bg">
             <div class="container">
                 <div class="pt-5 mt-4">
@@ -62,9 +55,6 @@
         </div>
 
     </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
 
     <script>
     function myFunction() {
