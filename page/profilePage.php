@@ -1,35 +1,39 @@
 <?php
 include '../component/sidebar.php';
-include('../db.php');
-$query = mysqli_query($con, "SELECT * FROM user WHERE id = " . $_SESSION['user']['id']);
-$user = mysqli_fetch_assoc($query);
+
+$user = null;
+// get user data
+$query = "SELECT * FROM users WHERE id = ?;";
+$stmt = mysqli_prepare($con, $query);
+mysqli_stmt_bind_param($stmt, 'i', $_SESSION['user']["id"]);
+mysqli_stmt_execute($stmt);
+$user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
 ?>
-<div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px 
-solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 
-0.19);">
-
-
-    <div class="body d-flex justify-content-between">
-        <h4>My Profile</h4>
-        <a href="../page/editProfileProcess.php"> <i style="color: red" class="fa fa-arrow-left fa-2x"></i></a>
+<div class="card card-body shadow"
+    style=" *box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+    <div class="d-flex justify-content-between align-items-center">
+        <h4 class="mb-0">My Profile</h4>
     </div>
     <hr>
-    <div class="card-body">
-        <form action="../process/editProfileProcess.php" method="post">
-            <img src="img/<?php echo $user['foto']; ?>" width='70' height='90' />
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Nama</label>
-                <input class="form-control" id="name" name="name" aria-describedby="emailHelp"
-                    value="<?php echo $user['nama'] ?>" disabled>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                    value="<?php echo $user['email'] ?>" disabled>
-            </div>
+    <form method="POST" action="../process/editProfileProcess.php" autocomplete="off">
+    <img src="img/<?php echo $user['4x6 biru.png']; ?>" width='70' height='90' />
+        <div class="mb-3">
+            <label for="in-name" class="form-label">Username</label>
+            <input class="form-control" id="in-name" name="name" value="<?php echo htmlspecialchars($user["name"]);?>" required>
+        </div>
+        <div class="mb-3">
+            <label for="in-email" class="form-label">Email</label>
+            <input class="form-control" id="in-email" name="email" value="<?php echo htmlspecialchars($user["email"]);?>" required>
+        </div>
+        <div class="mt-4">
+            <button type="submit" class="btn btn-dark w-100" name="edit" value="edit">Save Update</button>
+        </div>
+    </form>
+</div>
+</main>
+</div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-        </form>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+</html>
