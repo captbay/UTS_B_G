@@ -37,9 +37,10 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                         <td>'.$data['id_buku'].'</td>
                         <td>'.$data['gambar_buku'].'</td>
                         <td>'.$data['status'].'</td>
-                        <td>'.$data['tanggal_pengembalian'].'</td>
+                        <td>'.$data['tanggal_kembali'].'</td>
                         <td>
-                            <a href="../process/addBookProcess.php?id='.$data['id'].'><i class="fa-solid fa-book"></i></a>
+                            <a href="../process/pengembalianProcess.php?id='.$data['id_buku'].'"onClick="return confirm ( \'Are you sure want to return the book?\')"> <i class="fa fa-book" style="color:green"></i>
+                            </a>
                         </td>
                     </tr>';
                     $no++;

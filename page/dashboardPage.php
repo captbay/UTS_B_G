@@ -37,7 +37,7 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                         <td>'.$data['gambar_buku'].'</td>
                         <td>'.$data['jumlah_tersedia'].'</td>
                         <td>
-                            <a href="../process/pinjamProcess.php?id='.$data['id_buku'].'><i class="fa-solid fa-book"></i>
+                            <a href="../page/peminjamanPage.php?id='.$data['id_buku'].'"onClick="return confirm ( \'Are you sure want to borrow a book?\')"> <i class="fa fa-book" style="color:green"></i>
                             </a>
                         </td>
                     </tr>';
