@@ -12,7 +12,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/fee4f29424.js" crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="gaya.css" rel="stylesheet">
 </head>
 
 <body>
