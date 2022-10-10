@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .bg {
     flex-direction: column;
+  }
+  .container {
+    padding-bottom: 32px;
+  }
+  .bawah {
+    padding-top: 150px;
   }
 }
 
@@ -13,9 +19,10 @@
 .bg {
   background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1590&q=80");
   background-position: center;
-  /* background-size: cover; */
-  display: flex;  
+  background-size: auto;
+  display: flex;
   align-items: center;
+  justify-content: center;
   height: 829px;
-  width: 100%px;
+  width: 100%;
 }

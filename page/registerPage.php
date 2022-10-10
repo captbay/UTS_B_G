@@ -12,23 +12,15 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/fee4f29424.js" crossorigin="anonymous"></script>
-    <link href="../style.css" rel="stylesheet">
+    <link href="../gaya.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <!-- Nama : nama panggilan kalian -->
-                <a class="navbar-brand fw-bold" href="/GD4_B_0994">Perpustakaan : Registrasi</a>
-            </div>
-        </nav>
-    </header>
     <main>
-        <div class="bg bg-light text-dark">
-            <div class="container mt-5 d-flex align-items-center justify-content-center">
+        <div class="bg bawah bg-light text-dark">
+            <div class="container d-flex align-items-center justify-content-center">
                 <div class="card text-white bg-dark ma-5 shadow " style="min-width:
-25rem;">
+30rem;">
                     <div class="card-header fw-bold">Register</div>
                     <div class="card-body">
                         <form action="../process/registerProcess.php" method="post" enctype="multipart/form-data">

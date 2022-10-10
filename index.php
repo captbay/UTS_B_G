@@ -20,7 +20,7 @@
 
         <div class="bg">
             <div class="container">
-                <div class="pt-5 mt-4">
+                <div>
                     <h1 class="text-center align-middle text-white"
                         style="font-size: 70px;font-style: oblique;text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">
                         <b>
@@ -28,8 +28,8 @@
                     </h1>
                 </div>
             </div>
-            <div class="container" style="padding-top: 100px;">
-                <div class="card text-white bg-dark ma-5 shadow" style="min-width:400px; max-width: 550px;">
+            <div class="container">
+                <div class="card mx-auto text-white bg-dark ma-5 shadow " style="min-width:400px; max-width: 550px;">
                     <div class="card-header fw-bold text-center">Login</div>
                     <div class="card-body">
                         <form action="./process/loginProcess.php" method="post">
