@@ -66,17 +66,17 @@
                     <h2 class="text-light text-center pt-2">PHP</h2>
                     <hr>
                     <div class="menu">
-                        <div class="content-menu"></div>
+                        <div class="content-menu">
                             <i class="fa fa-dashboard"></i>
-                            <a href="./dashboardPage.php" style="font-weight:600">Dashboard</a>
+                            <a href="./dashboardPage.php" style="font-weight:600">&nbspDashboard</a>
                         </div>
                         <div class="content-menu">
                             <i class="fa fa-user"></i>
-                            <a href="./profilePage.php" style="font-weight:600">Profile</a>
+                            <a href="./profilePage.php" style="font-weight:600">&nbsp&nbspProfile</a>
                         </div>
                         <div class="content-menu">
                             <i class="fa fa-book"></i>
-                            <a href="./peminjamanPage.php" style="font-weight:600">Peminjaman</a>
+                            <a href="./peminjamanPage.php" style="font-weight:600">&nbspPeminjaman</a>
                         </div>
                         <div class="content-menu">
                             <i class="fa fa-sign-out"></i>

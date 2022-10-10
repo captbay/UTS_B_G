@@ -5,7 +5,7 @@
 solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
 0.19);">
     <div class="body d-flex justify-content-between">
-        <h4>Main Menu</h4>
+        <h4>Peminjaman</h4>
         <!-- <a href="./addBookPage.php" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Book</a> -->
     </div>
     <hr>
@@ -15,14 +15,15 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                 <th scope="col">No</th>
                 <th scope="col">Nama Buku</th>
                 <th scope="col">Gambar</th>
-                <th scope="col">Jumlah Tersedia</th>
-                <th scope="col">Pinjam</th>
+                <th scope="col">Status</th>
+                <th scope="col">Tanggal Pengembalian</th>
+                <th scope="col">Pengembalian Buku</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             <?php
-                $query = mysqli_query($con, "SELECT * FROM buku") or
+                $query = mysqli_query($con, "SELECT * FROM peminjaman") or
                 die(mysqli_error($con));
 
                 if (mysqli_num_rows($query) == 0) {
@@ -33,12 +34,12 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                     echo'
                     <tr>
                         <th scope="row">'.$no.'</th>
-                        <td>'.$data['nama_buku'].'</td>
+                        <td>'.$data['id_buku'].'</td>
                         <td>'.$data['gambar_buku'].'</td>
-                        <td>'.$data['jumlah_tersedia'].'</td>
+                        <td>'.$data['status'].'</td>
+                        <td>'.$data['tanggal_pengembalian'].'</td>
                         <td>
-                            <a href="../process/addBookProcess.php?id='.$data['id'].'><i class="fa-solid fa-book"></i>
-                            </a>
+                            <a href="../process/addBookProcess.php?id='.$data['id'].'><i class="fa-solid fa-book"></i></a>
                         </td>
                     </tr>';
                     $no++;

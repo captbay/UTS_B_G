@@ -1,6 +1,6 @@
 <?php
 echo
     '<script>
-    window.location = "../page/index.php"
+    window.location = "../index.php"
     </script>';
 ?>
