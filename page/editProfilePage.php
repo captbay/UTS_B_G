@@ -25,6 +25,9 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
             <label for="in-email" class="form-label">Email</label>
             <input class="form-control" id="in-email" name="email" value="<?php echo htmlspecialchars($user["email"]);?>" required>
         </div>
+        <div class="mt-4">
+            <button type="submit" class="btn btn-dark w-100" name="tambah" value="add">Save Profile</button>
+        </div>
     </form>
 </div>
 </main>
