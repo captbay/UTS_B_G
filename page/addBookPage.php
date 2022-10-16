@@ -8,7 +8,7 @@ include '../component/sidebar.php';
         <h4 class="mb-0">Add Book</h4>
     </div>
     <hr>
-    <form method="POST" action="../process/addBookProcess.php" autocomplete="off">
+    <form action="../process/addBookProcess.php" name="contact-form" method="post" enctype="multipart/form-data">
         <div class="mb-4">
             <label for="in-name" class="form-label">Nama Buku</label>
             <input class="form-control" id="in-name" name="name" required>
@@ -22,7 +22,7 @@ include '../component/sidebar.php';
             <input type="number" class="form-control" id="in-realese" name="realese" required>
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-dark w-100" name="tambah" value="add">Save Details</button>
+            <button type="submit" class="btn btn-dark w-100" name="tambah" value="addBook">Save Details</button>
         </div>
     </form>
 </div>

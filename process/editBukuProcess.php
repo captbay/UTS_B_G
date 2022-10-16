@@ -1,10 +1,10 @@
 <?php
-       session_start();
+
     if(isset($_POST['editBook'])){
 
         include('../db.php');
 
-        $id_buku = $_SESSION["id_buku"];
+        $id_buku = $_POST['id_buku'];
         $name = $_POST['nama_buku'];
         $jumlah = $_POST['jumlah_tersedia'];
 
@@ -36,7 +36,7 @@
                     // fetch column
                     $sql = "SELECT gambar_buku FROM buku where id_buku= ?";
                     $stmt = $con->prepare($sql);
-                    $stmt -> bind_param("i", $_SESSION["id_buku"]);
+                    $stmt -> bind_param("i", $_POST['id_buku']);
                     $stmt -> execute();
                     $result = $stmt->get_result();
                     $old_foto = $result->fetch_column();
