@@ -18,14 +18,21 @@
 <body>
     <main>
 
-        <div class="bg">
+        <div class="bg d-flex justify-content-center align-items-center column">
             <div class="container">
                 <div>
                     <h1 class="text-center align-middle text-white"
                         style="font-size: 70px;font-style: oblique;text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">
-                        <b>
-                            Selamat Datang <br> di<br> Perpustakaan</b>
+                        <b>Selamat Datang</b>
+                        <br>
+                        <b>di</b>
+                        <br>
+                        <b>Perpustakaan</b>
                     </h1>
+                </div>
+                <div class=" text-center">
+                    <a class="btn btn-light" href="./page/tentangKami.php">Tentang
+                        Kami</a>
                 </div>
             </div>
             <div class="container">

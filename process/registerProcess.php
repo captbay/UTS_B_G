@@ -77,7 +77,7 @@ if (isset($_POST['register'])) {
                         echo
                         '<script>
                     alert("Register Success");
-                    window.location = "../page/dashboardPage.php"
+                    window.location = "../index.php"
                     </script>';
                     } else {
                         echo
@@ -89,18 +89,28 @@ if (isset($_POST['register'])) {
                 }
             } else {
                 // Jika gambar gagal diupload, Lakukan ini
-                echo "Maaf, Gambar gagal untuk diupload.";
-                echo "<br><a href='form.php'>Kembali Ke Form</a>";
+                echo
+                '<script>
+            alert("Maaf, Gambar gagal untuk diupload.");
+            window.history.back()
+                 </script>';
             }
         } else {
             // Jika ukuran file lebih dari 1MB, lakukan :
-            echo "Maaf, Ukuran gambar yang diupload tidak boleh lebih dari 1MB";
+            echo
+            '<script>
+            alert("Maaf, Ukuran gambar yang diupload tidak boleh lebih dari 1MB");
+            window.history.back()
+        </script>';
             echo "<br><a href='form.php'>Kembali Ke Form</a>";
         }
     } else {
         // Jika tipe file yang diupload bukan JPG / JPEG / PNG, lakukan :
-        echo "Maaf, Tipe gambar yang diupload harus JPG / JPEG / PNG.";
-        echo "<br><a href='form.php'>Kembali Ke Form</a>";
+        echo
+        '<script>
+            alert("Maaf, Tipe gambar yang diupload harus JPG / JPEG / PNG.");
+            window.history.back()
+        </script>';
     }
 } else {
     echo

@@ -17,11 +17,11 @@
 
 <body>
     <main>
-        <div class="bg bawah bg-light text-dark">
+        <div class="bg bawah bg-light text-dark d-flex justify-content-center align-items-center">
             <div class="container d-flex align-items-center justify-content-center">
                 <div class="card text-white bg-dark ma-5 shadow " style="min-width:
 30rem;">
-                    <div class="card-header fw-bold">Register</div>
+                    <div class="card-header fw-bold text-center">Register</div>
                     <div class="card-body">
                         <form action="../process/registerProcess.php" method="post" enctype="multipart/form-data">
                             <div class="mb-3">
@@ -45,8 +45,8 @@
                                 <button type="submit" class="btn btn-primary" name="register">Register</button>
                             </div>
                         </form>
-                        <p class="mt-2 mb-0">Have an account? <a href="../index.php" class="text-primary">Login
-                                here!</a>
+                        <p class="mt-2 mb-0">Punya akun? <a href="../index.php" class="text-primary">Login
+                                disini!</a>
                         </p>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ include '../component/sidebar.php';
         </div>
         <div class="mb-4">
             <label for="in-genre" class="form-label">Gambar</label>
-            
+
         </div>
         <div class="mb-4">
             <label for="in-realese" class="form-label">Jumlah Tersedia</label>
