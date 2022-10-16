@@ -14,12 +14,12 @@ include '../component/sidebar.php';
             <input class="form-control" id="in-name" name="name" required>
         </div>
         <div class="mb-4">
-            <label for="in-genre" class="form-label">Gambar</label>
-
+            <label for="exampleInputImages" class="form-label">Gambar</label>
+            <input class="form-control" type="file" name="gambar">
         </div>
         <div class="mb-4">
-            <label for="in-realese" class="form-label">Jumlah Tersedia</label>
-            <input type="number" class="form-control" id="in-realese" name="realese" required>
+            <label for="in-jumlah" class="form-label">Jumlah Buku</label>
+            <input type="number" class="form-control" id="in-jumlah" name="jumlah" required>
         </div>
         <div class="mt-4">
             <button type="submit" class="btn btn-dark w-100" name="tambah" value="addBook">Save Details</button>
