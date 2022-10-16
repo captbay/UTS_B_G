@@ -1,13 +1,11 @@
 <?php
 include '../component/sidebar.php';
+    include('../db.php');
 
-$user = null;
-// get user data
-$query = "SELECT * FROM buku WHERE id = ?;";
-$stmt = mysqli_prepare($con, $query);
-mysqli_stmt_bind_param($stmt, 'i', $_SESSION['user']["id"]);
-mysqli_stmt_execute($stmt);
-$user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
+    $id=$_GET['id_buku'];
+    $query = mysqli_query($con, "SELECT * FROM buku WHERE id_buku = '$id'") or
+        die(mysqli_error($con));
+        $buku = mysqli_fetch_assoc($query);
 ?>
 <div class="card card-body shadow"
     style=" *box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
@@ -16,21 +14,22 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
     </div>
     <hr>
     <form method="POST" action="../process/editBukuProcess.php" autocomplete="off">
-    <img src="../images/<?php echo $user["foto"];?>" width='70' height='90' />
+    <img src="../images/<?php echo $buku['gambar_buku'];?>" width='70' height='90' />
         <div class="mb-3">
             <label for="in-name" class="form-label">Nama Buku</label>
-            <input class="form-control" id="in-name" name="name" value="<?php echo htmlspecialchars($user["nama_buku"]);?>" required>
+            <input type="text" name="nama_buku" value="<?php echo $buku['nama_buku']?>">
         </div>
         <div class="mb-3">
             <label for="exampleInputImages" class="form-label">Gambar</label>
-            <input class="form-control" id="in-images" name="images" value="<?php echo htmlspecialchars($user["gambar_buku"]);?>" required>
+            <input type="file" name="gambar_buku" id="gambar_buku" value="<?php echo $buku['gambar_buku']?>">
         </div>
         <div class="mb-3">
             <label for="in-jumlah" class="form-label">Jumlah Tersedia</label>
-            <input class="form-control" id="in-jumlah" name="jumlah" value="<?php echo htmlspecialchars($user["jumlah_tersedia"]);?>" required>
+            <input type="number" name="jumlah_tersedia" value="<?php echo $buku['jumlah_tersedia']?>"/>
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-dark w-100" name="tambah" value="add">Save Book</button>
+            <input type="submit" value="edit" name="editBook" />
+            <input type='hidden' name="id_buku" value="<?php echo $buku['id_buku']?>" />
         </div>
     </form>
 </div>

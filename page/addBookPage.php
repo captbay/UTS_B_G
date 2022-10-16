@@ -11,18 +11,18 @@ include '../component/sidebar.php';
     <form action="../process/addBookProcess.php" name="contact-form" method="post" enctype="multipart/form-data">
         <div class="mb-4">
             <label for="in-name" class="form-label">Nama Buku</label>
-            <input class="form-control" id="in-name" name="name" required>
+            <input class="form-control" id="in-name" name="nama_buku" required>
         </div>
         <div class="mb-4">
             <label for="exampleInputImages" class="form-label">Gambar</label>
-            <input class="form-control" type="file" name="gambar">
+            <input class="form-control" type="file" name="gambar_buku">
         </div>
         <div class="mb-4">
             <label for="in-jumlah" class="form-label">Jumlah Buku</label>
-            <input type="number" class="form-control" id="in-jumlah" name="jumlah" required>
+            <input type="number" class="form-control" id="in-jumlah" name="jumlah_tersedia" required>
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-dark w-100" name="tambah" value="addBook">Save Details</button>
+            <button type="submit" class="btn btn-dark w-100" value="Tambah" name="addBook">Save Details</button>
         </div>
     </form>
 </div>

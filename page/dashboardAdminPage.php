@@ -42,7 +42,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                             </a>
                         </td>
                         <td>
-                            <a href="../page/deleteBookProcess.php?id=' . $data['id_buku'] . '"onClick="return confirm ( \'Are you sure want to delete the book?\')"> <i class="fa fa-trash" style="color:red"></i>
+                            <a href="../process/deleteBookProcess.php?id=' . $data['id_buku'] . '"onClick="return confirm ( \'Are you sure want to delete the book?\')"> <i class="fa fa-trash" style="color:red"></i>
                             </a>
                         </td>
                     </tr>';
