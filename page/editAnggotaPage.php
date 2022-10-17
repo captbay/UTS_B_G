@@ -1,6 +1,6 @@
 <?php
 include '../component/sidebar.php';
-
+include('../db.php');
 $query = mysqli_query($con, "SELECT * FROM anggota WHERE id_anggota = ". $_GET['id']);
 $anggota = mysqli_fetch_assoc($query);
 
@@ -13,7 +13,7 @@ $anggota = mysqli_fetch_assoc($query);
         <h4 class="mb-0">Edit Anggota</h4>
     </div>
     <hr>
-    <form action="../process/addAnggotaProcess.php" name="contact-form" method="post" enctype="multipart/form-data">
+    <form action="../process/editAnggotaProcess.php" name="contact-form" method="post" enctype="multipart/form-data">
         <div class="mb-4">
             <label for="in-name" class="form-label">Nama Anggota</label>
             <input class="form-control" id="in-name" name="nama_anggota" value="<?php echo $anggota['nama_anggota']?>">

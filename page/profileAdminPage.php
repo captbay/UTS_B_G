@@ -27,7 +27,7 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
             <input class="form-control" id="in-password" name="password" required>
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-dark w-100" name="editProfil">Update Profile</button>
+            <button type="submit" class="btn btn-dark w-100" name="editProfil">Save Profile</button>
             <input type='hidden' name="id_buku" value="<?php echo $user['id'] ?>" />
         </div>
     </form>
