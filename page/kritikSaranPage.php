@@ -15,7 +15,7 @@ solid #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Kritik & Saran</th>
-                <th scope="col"></th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>

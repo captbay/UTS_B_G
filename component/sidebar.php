@@ -88,15 +88,15 @@ if (!$_SESSION['isLogin']) {
                     </div>
                     <div class="content-menu">
                         <i class="fa fa-book"></i>
-                        <a href="./peminjamanPage.php" style="font-weight:600">&nbspPeminjaman</a>
+                        <a href="./peminjamanPage.php" style="font-weight:600">&nbsp&nbspPeminjaman</a>
                     </div>
                     <div class="content-menu">
                         <i class="fa fa-users"></i>
-                        <a href="./anggotaPage.php" style="font-weight:600">&nbsp&nbspAnggota</a>
+                        <a href="./anggotaPage.php" style="font-weight:600">Anggota</a>
                     </div>
                     <div class="content-menu">
                         <i class="far fa-comments"></i>
-                        <a href="./kritikSaranPage.php" style="font-weight:600">&nbspKritik & Saran</a>
+                        <a href="./kritikSaranPage.php" style="font-weight:600">Kritik & Saran</a>
                     </div>
 
                     <hr class="white">
