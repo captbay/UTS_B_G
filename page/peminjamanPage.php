@@ -22,7 +22,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
         </thead>
         <tbody>
             <?php
-                $query = mysqli_query($con, "SELECT * FROM peminjaman") or
+                $query = mysqli_query($con, "SELECT * FROM peminjaman natural join buku") or
                 die(mysqli_error($con));
 
                 if (mysqli_num_rows($query) == 0) {
@@ -33,7 +33,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                     echo'
                     <tr>
                         <th scope="row">'.$no.'</th>
-                        <td>'.$data['id_buku'].'</td>
+                        <td>'.$data['nama_buku'].'</td>
                         <td>'.$data['status'].'</td>
                         <td>'.$data['tanggal_kembali'].'</td>
                         <td>

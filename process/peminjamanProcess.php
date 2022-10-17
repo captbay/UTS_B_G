@@ -8,11 +8,11 @@
         $id_buku = $_GET['id'];
         $tanggal_pinjam = $_GET['tanggal_pinjam'];
         $tanggal_kembali = $_GET['tanggal_kembali'];
-        
+
         $query = mysqli_query(
             $con,
             "INSERT INTO peminjaman(id_user, id_buku, tanggal_pinjam, tanggal_kembali, status)
-        VALUES ('$id', '$id_buku', '$tanggal_pinjam2', '$tanggal_kembali2', 'dipinjam');"
+        VALUES ('$id', '$id_buku', '$tanggal_pinjam', '$tanggal_kembali', 'dipinjam');"
         )
             or die(mysqli_error($con)); // try-catching error
         
@@ -23,7 +23,7 @@
             echo
             '<script>
             alert("Peminjaman Success");
-             window.location = "../page/dashboardPage.php"
+            //window.location = "../page/dashboardPage.php"
             </script>';
         } else {
             echo
