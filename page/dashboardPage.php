@@ -22,33 +22,29 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
         </thead>
         <tbody>
             <?php
-            $query = mysqli_query($con, "SELECT * FROM buku ") or
+            $query = mysqli_query($con, "SELECT * FROM buku") or
                 die(mysqli_error($con));
 
             if (mysqli_num_rows($query) == 0) {
                 echo '<tr> <td colspan="7"> Tidak ada data </td> </tr>';
             } else {
                 $no = 1;
-                while ($data = mysqli_fetch_assoc($query)) { ?>
-                    
+                while ($data = mysqli_fetch_assoc($query)) {
+                    echo '
                     <tr>
-                        <th scope="row"><?php echo $no ?></th>
-                        <td><?php echo $data['nama_buku'] ?></td>
-                        <td><?php echo $data['gambar_buku'] ?></td>
-                        <td><?php echo $data['jumlah_tersedia'] ?></td>
+                        <th scope="row">' . $no . '</th>
+                        <td>' . $data['nama_buku'] . '</td>
+                        <td>' . $data['gambar_buku'] . '</td>
+                        <td>' . $data['jumlah_tersedia'] . '</td>
                         <td>
-                          <?php  if($data['jumlah_tersedia']<=0){ ?>
-                            
-                            <?php }else{ ?>
-                            <a  href="<?php echo "detilBukuPage.php?id=".$data['id_buku'] ?>"   onClick="return confirm ( \'Are you sure want to borrow a book?\')"> <i class="fa fa-book" style="color:green"></i>
+                            <a href="detilBukuPage.php?id=' . $data['id_buku'] . '"   onClick="return confirm ( \'Are you sure want to borrow a book?\')"> <i class="fa fa-book" style="color:green"></i>
                             </a>
-                           <?php } ?>
                         </td>
-                    </tr>
-                   
-            <?php  $no++;  } ?>
-          <?php  } ?>
-            
+                    </tr>';
+                    $no++;
+                }
+            }
+            ?>
         </tbody>
     </table>
 </div>

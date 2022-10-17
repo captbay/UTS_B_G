@@ -6,11 +6,12 @@
         
         $id = $_SESSION['user']['id'];
         $id_buku = $_GET['id'];
-        
-        $query = mysqli_query("UPDATE buku SET jumlah_tersedia = jumlah_tersedia+1 WHERE id_buku = ". $_GET['id']);
 
-        $query = mysqli_query("UPDATE pengembalian SET status='dikembalikan' WHERE id = ".$_SESSION['user']['id']);
-        if ($query) {
+        $query2 = mysqli_query($con,"UPDATE peminjaman SET status='dikembalikan' WHERE id_user = ".$id. " and id_buku = ". $id_buku);
+        $query = mysqli_query($con,"UPDATE buku SET jumlah_tersedia = jumlah_tersedia+1 WHERE id_buku = ". $id_buku);
+       
+        if ($query && $query2) {
+            echo
             '<script>
                 alert("Pengembalian Berhasil");
                 window.location = "../page/dashboardPage.php"

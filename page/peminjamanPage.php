@@ -24,7 +24,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
             <?php
                 $query = mysqli_query($con, "SELECT * FROM peminjaman natural join buku") or
                 die(mysqli_error($con));
-
+                
                 if (mysqli_num_rows($query) == 0) {
                     echo '<tr> <td colspan="7"> Tidak ada data </td> </tr>';
                 }else{
