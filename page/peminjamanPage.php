@@ -39,7 +39,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                         <td>' . $data['status'] . '</td>
                         <td>' . $data['tanggal_kembali'] . '</td>
                         <td>
-                            <a href="../process/pengembalianProcess.php?id=' . $data['id'] . '&idbuku=' . $data['id_buku'] . '"onClick="return confirm ( \'Are you sure want to return the book?\')"> <i class="fa fa-book" style="color:red"></i>
+                            <a href="../process/pengembalianProcess.php?id=' . $data['id'] . '&idbuku=' . $data['id_buku'] . '&status=' . $data['status'] . '"onClick="return confirm ( \'Are you sure want to return the book?\')"> <i class="fa fa-book" style="color:red"></i>
                             </a>
                         </td>
                     </tr>';

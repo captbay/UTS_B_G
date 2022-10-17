@@ -1,25 +1,33 @@
 <?php
-    session_start();
-    if(isset($_GET['id'])){
+session_start();
+if (isset($_GET['id'])) {
 
-        include('../db.php');
-        
-        $id = $_SESSION['user']['id'];
-        $id_buku = $_GET['id'];
-        $tanggal_pinjam = $_GET['tanggal_pinjam'];
-        $tanggal_kembali = $_GET['tanggal_kembali'];
+    include('../db.php');
 
+    $id = $_SESSION['user']['id'];
+    $id_buku = $_GET['id'];
+    $tanggal_pinjam = $_GET['tanggal_pinjam'];
+    $tanggal_kembali = $_GET['tanggal_kembali'];
+    $jumlah = $_GET['jumlah'];
+
+
+    if ($jumlah == 0) {
+        echo
+        '<script>
+        alert("Peminjaman Failed karena jumlah 0");
+        window.location = "../page/dashboardPage.php"
+        </script>';
+    } else {
         $query = mysqli_query(
             $con,
             "INSERT INTO peminjaman(id_user, id_buku, tanggal_pinjam, tanggal_kembali, status)
-        VALUES ('$id', '$id_buku', '$tanggal_pinjam', '$tanggal_kembali', 'dipinjam');"
+            VALUES ('$id', '$id_buku', '$tanggal_pinjam', '$tanggal_kembali', 'dipinjam');"
         )
             or die(mysqli_error($con)); // try-catching error
-        
-       
+
         // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
         if ($query) {
-            $update = mysqli_query($con,"UPDATE buku SET jumlah_tersedia = jumlah_tersedia-1 WHERE id_buku = ". $_GET['id']);
+            $update = mysqli_query($con, "UPDATE buku SET jumlah_tersedia = jumlah_tersedia-1 WHERE id_buku = " . $_GET['id']);
             echo
             '<script>
             alert("Peminjaman Success");
@@ -32,11 +40,10 @@
         window.history.back()
         </script>';
         }
-
-    } else {
-        echo
-        '<script>
+    }
+} else {
+    echo
+    '<script>
                 window.history.back()
                 </script>';
-        }
-    ?>
+}

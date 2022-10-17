@@ -46,7 +46,12 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
         </tr>
         <tr>
             <td>
-                <a href="<?php echo "../process/peminjamanProcess.php?id=" . $_GET['id'] . "&tanggal_pinjam=" . $tglPeminjaman . "&tanggal_kembali=" . $tglPengembalian ?>"
+                <p>Jumlah tersedia :</p><?php echo $data['jumlah_tersedia'] ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="<?php echo "../process/peminjamanProcess.php?id=" . $_GET['id'] . "&tanggal_pinjam=" . $tglPeminjaman . "&tanggal_kembali=" . $tglPengembalian . "&jumlah=" . $data['jumlah_tersedia'] ?>"
                     onClick="return confirm ( 'Are you sure want to borrow a book?')"> <i class="fa fa-book"
                         style="color:green"> Pinjam</i>
                 </a>
