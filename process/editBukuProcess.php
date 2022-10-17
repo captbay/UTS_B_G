@@ -47,19 +47,19 @@
                 } else {
                     // Jika gambar gagal diupload, Lakukan ini
                     echo "Maaf, Gambar gagal untuk diupload.";
-                    echo "<br><a href='../page/dashboardPage.php'>Kembali Ke Form</a>";
+                    echo "<br><a href='../page/dashboardAdminPage.php'>Kembali Ke Form</a>";
                     exit;
                 }
             } else {
                 // Jika ukuran file lebih dari 1MB, lakukan :
                 echo "Maaf, Ukuran gambar yang diupload tidak boleh lebih dari 1MB";
-                echo "<br><a href='../page/dashboardPage.php'>Kembali Ke Form</a>";
+                echo "<br><a href='../page/dashboardAdminPage.php'>Kembali Ke Form</a>";
                 exit;
             }
         } else {
             // Jika tipe file yang diupload bukan JPG / JPEG / PNG, lakukan :
             echo "Maaf, Tipe gambar yang diupload harus JPG / JPEG / PNG.";
-            echo "<br><a href='../page/dashboardPage.php'>Kembali Ke Form</a>";
+            echo "<br><a href='../page/dashboardAdminPage.php'>Kembali Ke Form</a>";
             exit;
         }
         
@@ -75,7 +75,7 @@
             echo
             '<script>
                 alert("Edit Success");
-                window.location = "../page/dashboardPage.php"
+                window.location = "../page/dashboardAdminPage.php"
             </script>';
         } else {
             echo

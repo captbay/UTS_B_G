@@ -2,7 +2,7 @@
 include '../component/sidebar.php';
     include('../db.php');
 
-    $id=$_GET['id_buku'];
+    $id=$_GET['id'];
     $query = mysqli_query($con, "SELECT * FROM buku WHERE id_buku = '$id'") or
         die(mysqli_error($con));
         $buku = mysqli_fetch_assoc($query);
@@ -13,7 +13,7 @@ include '../component/sidebar.php';
         <h4 class="mb-0">Edit Book</h4>
     </div>
     <hr>
-    <form method="POST" action="../process/editBukuProcess.php" autocomplete="off">
+    <form method="POST" action="../process/editBukuProcess.php" enctype="multipart/form-data">
     <img src="../images/<?php echo $buku['gambar_buku'];?>" width='70' height='90' />
         <div class="mb-3">
             <label for="in-name" class="form-label">Nama Buku</label>

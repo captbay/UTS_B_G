@@ -1,36 +1,29 @@
 <?php
     session_start();
-    if(isset($_POST['peminjaman'])){
+    if(isset($_GET['id'])){
 
         include('../db.php');
         
         $id = $_SESSION['user']['id'];
-        $id_buku = $_GET['id_buku'];
-        $tanggal_pinjam = $_POST['tanggal_pinjam'];
-        $tanggal_kembali = $_POST['tanggal_kembali'];
-        $status = "dipinjam";
-        $jumlah_tersedia = $_POST['jumlah_tersedia'];
-        $jumlah = $jumlah_tersedia - 1;
-        //$tgl=date('d-m-Y');
+        $id_buku = $_GET['id'];
+        $tanggal_pinjam = $_GET['tanggal_pinjam'];
+        $tanggal_kembali = $_GET['tanggal_kembali'];
         
         $query = mysqli_query(
             $con,
             "INSERT INTO peminjaman(id_user, id_buku, tanggal_pinjam, tanggal_kembali, status)
-        VALUES (?, ?, ?, ?, ?);"
+        VALUES ('$id', '$id_buku', '$tanggal_pinjam2', '$tanggal_kembali2', 'dipinjam');"
         )
             or die(mysqli_error($con)); // try-catching error
-        mysqli_stmt_bind_param($query, 'iidds', $id, $id_buku, $tanggal_pinjam, $tanggal_kembali, $status);
-        mysqli_stmt_execute($query);
+        
        
         // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
         if ($query) {
-            $update = mysqli_prepare($con,"UPDATE buku SET jumlah_tersedia = ? WHERE id_buku = ?");
-            mysqli_stmt_bind_param($query, 'ii',$jumlah, $id_buku);
-            mysqli_stmt_execute($update);
-
+            $update = mysqli_query($con,"UPDATE buku SET jumlah_tersedia = jumlah_tersedia-1 WHERE id_buku = ". $_GET['id']);
+            echo
             '<script>
             alert("Peminjaman Success");
-            window.location = "../page/dashboardPage.php"
+             window.location = "../page/dashboardPage.php"
             </script>';
         } else {
             echo

@@ -39,7 +39,7 @@
                     echo
                         '<script>
                             alert("Add Success");
-                            window.location = "../page/dashboardPage.php"
+                            window.location = "../page/dashboardAdminPage.php"
                         </script>';
                 } else {
                     echo
