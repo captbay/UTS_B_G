@@ -5,7 +5,9 @@ include '../component/sidebar.php';
     style=" *box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
 
     <div class="d-flex justify-content-between align-items-center">
-        <h4 class="mb-0">Add Anggota</h4>
+        <a href="./anggotaPage.php"> <i style="color: black" class="fa fa-arrow-left fa-2x"></i></a>
+
+        <h4 class="mb-0">Tambah Anggota Kelompok Belajar</h4>
     </div>
     <hr>
     <form action="../process/addAnggotaProcess.php" name="contact-form" method="post" enctype="multipart/form-data">

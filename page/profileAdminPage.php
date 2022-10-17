@@ -23,7 +23,7 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
                 value="<?php echo htmlspecialchars($user["email"]); ?>" disabled>
         </div>
         <div class="mb-3">
-            <label for="in-email" class="form-label">Password</label>
+            <label for="in-email" class="form-label">Update Password</label>
             <input class="form-control" id="in-password" name="password" required>
         </div>
         <div class="mt-4">

@@ -10,8 +10,9 @@ solid #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
 
 
     <div class="body d-flex justify-content-between">
-        <h4>Edit Series</h4>
         <a href="./kritikSaranPage.php"> <i style="color: black" class="fa fa-arrow-left fa-2x"></i></a>
+
+        <h4>Edit Series</h4>
     </div>
     <hr>
     <div class="card-body">

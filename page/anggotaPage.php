@@ -5,7 +5,7 @@ include '../component/sidebar.php'
 solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
 0.19);">
     <div class="body d-flex justify-content-between">
-        <h4>Anggota</h4>
+        <h4>Anggota Kelompok Belajar</h4>
         <a href="./addAnggotaPage.php" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Anggota</a>
     </div>
     <hr>

@@ -16,7 +16,10 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
     </div>
     <hr>
     <form method="POST" action="../process/editProfileProcess.php" autocomplete="off">
-        <img src="../images/<?php echo $user["foto"]; ?>" width='70' height='90' class="rounded-circle" />
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="../images/<?php echo $user["foto"]; ?>" width='150' height='150' class="rounded-circle " />
+
+        </div>
         <div class="mb-3">
             <label for="in-name" class="form-label">Username</label>
             <input class="form-control" id="in-name" name="nama" value="<?php echo htmlspecialchars($user["nama"]); ?>"

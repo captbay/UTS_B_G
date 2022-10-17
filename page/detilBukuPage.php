@@ -31,7 +31,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
         </tr>
         <tr>
             <td>
-                <p>gambar buku :</p><img src="../images/<?php $data['gambar_buku']; ?>" width='70' height='90' />
+                <p>gambar buku :</p><img src="../images/<?php echo $data['gambar_buku']; ?>" width='70' height='90' />
             </td>
         </tr>
         <tr>

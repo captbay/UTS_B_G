@@ -92,7 +92,7 @@ if (!$_SESSION['isLogin']) {
                     </div>
                     <div class="content-menu">
                         <i class="fa fa-users"></i>
-                        <a href="./anggotaPage.php" style="font-weight:600">Anggota</a>
+                        <a href="./anggotaPage.php" style="font-weight:600">Anggota Kelompok Belajar</a>
                     </div>
                     <div class="content-menu">
                         <i class="far fa-comments"></i>
