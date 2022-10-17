@@ -73,7 +73,7 @@ if (!$_SESSION['isLogin']) {
                     <h2 class="text-light text-center pt-2"
                         style="font-style: oblique;text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">
                         Perpustakaan</h2>
-                        
+
                 </div>
                 <hr class="white">
                 <div class="menu">
@@ -98,7 +98,7 @@ if (!$_SESSION['isLogin']) {
                         <i class="far fa-comments"></i>
                         <a href="./kritikSaranPage.php" style="font-weight:600">&nbspKritik & Saran</a>
                     </div>
-                    
+
                     <hr class="white">
                 </div>
                 <div class="menu">

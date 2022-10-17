@@ -10,7 +10,7 @@ $tglPengembalian = date("Y-m-d", $date);
 solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
 0.19);">
     <div class="body d-flex justify-content-between">
-        <h4>Detile Buku</h4>
+        <h4>Detail Buku</h4>
         <!-- <a href="./addBookPage.php" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Book</a> -->
     </div>
     <hr>
@@ -25,22 +25,30 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
         ?>
 
         <tr>
-            <td><?php echo $data['nama_buku'] ?></td>
+            <td>
+                <p>nama buku :</p><?php echo $data['nama_buku'] ?>
+            </td>
         </tr>
         <tr>
-            <td><?php echo $data['gambar_buku'] ?></td>
+            <td>
+                <p>gambar buku :</p><img src="../images/<?php $data['gambar_buku']; ?>" width='70' height='90' />
+            </td>
         </tr>
         <tr>
-            <td><?php echo $tglPeminjaman ?></td>
+            <td>
+                <p>tanggl pinjam :</p><?php echo $tglPeminjaman ?>
+            </td>
         </tr>
         <tr>
-            <td><?php echo $tglPengembalian ?></td>
+            <td>
+                <p>tanggal kembali :</p><?php echo $tglPengembalian ?>
+            </td>
         </tr>
         <tr>
             <td>
                 <a href="<?php echo "../process/peminjamanProcess.php?id=" . $_GET['id'] . "&tanggal_pinjam=" . $tglPeminjaman . "&tanggal_kembali=" . $tglPengembalian ?>"
-                    onClick="return confirm ( \'Are you sure want to borrow a book?\')"> <i class="fa fa-book"
-                        style="color:green"></i>
+                    onClick="return confirm ( 'Are you sure want to borrow a book?')"> <i class="fa fa-book"
+                        style="color:green"> Pinjam</i>
                 </a>
             </td>
         </tr>
@@ -49,6 +57,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
 
 
     </table>
+</div>
 </div>
 </aside>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
