@@ -29,7 +29,7 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
         </div>
         <div class="mt-4">
             <button type="submit" class="btn btn-dark w-100" name="editProfil">Save Profile</button>
-            <input type='hidden' name="id_buku" value="<?php echo $user['id'] ?>" />
+            <input type='hidden' name="editProfil" value="<?php echo $user['id'] ?>" />
         </div>
     </form>
 </div>
