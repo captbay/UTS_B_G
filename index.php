@@ -31,8 +31,9 @@
                     </h1>
                 </div>
                 <div class=" text-center">
-                    <a class="btn btn-light" href="./page/tentangKami.php">Tentang
-                        Kami</a>
+                    <a class="btn btn-light mx-2" href="./page/tentangKami.php">Developer</a>
+                    <a class="btn btn-light mx-2" href="./page/tentangWebsite.php">Tentang Website</a>
+
                 </div>
             </div>
             <div class="container">

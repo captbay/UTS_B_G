@@ -102,7 +102,6 @@ if (isset($_POST['register'])) {
             alert("Maaf, Ukuran gambar yang diupload tidak boleh lebih dari 1MB");
             window.history.back()
         </script>';
-            echo "<br><a href='form.php'>Kembali Ke Form</a>";
         }
     } else {
         // Jika tipe file yang diupload bukan JPG / JPEG / PNG, lakukan :

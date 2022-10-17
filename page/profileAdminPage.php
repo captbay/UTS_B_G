@@ -1,5 +1,5 @@
 <?php
-include '../component/sidebar.php';
+include '../component/sidebarAdmin.php';
 
 $user = null;
 // get user data
@@ -15,17 +15,17 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
         <h4 class="mb-0">My Profile</h4>
     </div>
     <hr>
-    <form method="POST" action="../process/editProfileProcess.php" autocomplete="off">
-        <img src="../images/<?php echo $user["foto"]; ?>" width='70' height='90' class="rounded-circle" />
+    <form method="POST" action="../process/editProfileAdminProcess.php" autocomplete="off">
+        <img src="../images/admin.jpg" width='70' height='90' class="rounded-circle" />
         <div class="mb-3">
-            <label for="in-name" class="form-label">Username</label>
-            <input class="form-control" id="in-name" name="nama" value="<?php echo htmlspecialchars($user["nama"]); ?>"
-                required>
-        </div>
-        <div class="mb-3">
-            <label for="in-email" class="form-label">Email</label>
+            <label for="in-email" class="form-label">Username</label>
             <input class="form-control" id="in-email" name="email"
                 value="<?php echo htmlspecialchars($user["email"]); ?>" required>
+        </div>
+        <div class="mb-3">
+            <label for="in-email" class="form-label">Password</label>
+            <input class="form-control" id="in-password" name="password"
+                value="<?php echo htmlspecialchars($user["password"]); ?>" required>
         </div>
         <div class="mt-4">
             <button type="submit" class="btn btn-dark w-100" name="editProfil">Save Profile</button>

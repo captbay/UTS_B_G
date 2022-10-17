@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     $query = mysqli_query($con, "SELECT * FROM user WHERE email = '$email'") or
         die(mysqli_error($con));
     // ini buat ngecek kalo misalnya hasil dari querynya == 0 ato ga ketemu ->emailnya tdk ditemukan
-    if (mysqli_num_rows($query) == 0) { 
+    if (mysqli_num_rows($query) == 0) {
         echo
         '<script>
             alert("Email not found!"); window.history.back()
@@ -26,18 +26,18 @@ if (isset($_POST['login'])) {
             $_SESSION['isLogin'] = true;
             $_SESSION['user'] = $user;
 
-            if($user['email']=="admin"){
+            if ($user['email'] == "admin") {
                 echo
                 '<script>
                     alert("Login Success"); window.location = "../page/dashboardAdminPage.php"
                     </script>';
-            }else{
+            } else {
                 echo
                 '<script>
                     alert("Login Success"); window.location = "../page/dashboardPage.php"
                     </script>';
             }
-        } else  {
+        } else {
             echo
             '<script>
                 alert("Email or Password Invalid");

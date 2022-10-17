@@ -5,8 +5,8 @@ include '../component/sidebarAdmin.php'
 solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
 0.19);">
     <div class="body d-flex justify-content-between">
-        <h4>Main Menu</h4>
-        <a href="./addBookPage.php" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Book</a>
+        <h4>Peminjaman</h4>
+        <!-- <a href="./addBookPage.php" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Book</a> -->
     </div>
     <hr>
     <table class="table ">
@@ -14,16 +14,15 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama Buku</th>
-                <th scope="col">Gambar</th>
-                <th scope="col">Jumlah Tersedia</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Hapus</th>
+                <th scope="col">Status</th>
+                <th scope="col">Tanggal Pengembalian</th>
+                <th scope="col">Pengembalian Buku</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $query = mysqli_query($con, "SELECT * FROM buku") or
+            $query = mysqli_query($con, "SELECT * FROM peminjaman natural join buku") or
                 die(mysqli_error($con));
 
             if (mysqli_num_rows($query) == 0) {
@@ -35,14 +34,10 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                     <tr>
                         <th scope="row">' . $no . '</th>
                         <td>' . $data['nama_buku'] . '</td>
-                        <td><img src="../images/' . $data['gambar_buku'] . '" width="70" height="90"></td>
-                        <td>' . $data['jumlah_tersedia'] . '</td>
+                        <td>' . $data['status'] . '</td>
+                        <td>' . $data['tanggal_kembali'] . '</td>
                         <td>
-                            <a href="../page/editBookPage.php?id=' . $data['id_buku'] . '"onClick="return confirm ( \'Are you sure want to edit the book?\')"> <i class="fa fa-pen" style="color:green"></i>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="../process/deleteBookProcess.php?id=' . $data['id_buku'] . '"onClick="return confirm ( \'Are you sure want to delete the book?\')"> <i class="fa fa-trash" style="color:red"></i>
+                            <a href="../process/pengembalianProcess.php?id=' . $data['id_buku'] . '"onClick="return confirm ( \'Are you sure want to return the book?\')"> <i class="fa fa-book" style="color:yellow"></i>
                             </a>
                         </td>
                     </tr>';

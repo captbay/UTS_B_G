@@ -34,7 +34,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                     <tr>
                         <th scope="row">' . $no . '</th>
                         <td>' . $data['nama_buku'] . '</td>
-                        <td>' . $data['gambar_buku'] . '</td>
+                        <td><img src="../images/' . $data['gambar_buku'] . '" width="70" height="90"></td>
                         <td>' . $data['jumlah_tersedia'] . '</td>
                         <td>
                             <a href="detilBukuPage.php?id=' . $data['id_buku'] . '"   onClick="return confirm ( \'Are you sure want to borrow a book?\')"> <i class="fa fa-book" style="color:green"></i>
