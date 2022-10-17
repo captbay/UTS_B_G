@@ -14,7 +14,7 @@
             echo
             '<script>
                 alert("Pengembalian Berhasil");
-                window.location = "../page/dashboardPage.php"
+                window.location = "../page/peminjamanPage.php"
             </script>';
         } else {
             echo

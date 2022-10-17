@@ -23,7 +23,7 @@
             echo
             '<script>
             alert("Peminjaman Success");
-            //window.location = "../page/dashboardPage.php"
+            window.location = "../page/dashboardPage.php"
             </script>';
         } else {
             echo
