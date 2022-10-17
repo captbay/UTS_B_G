@@ -33,9 +33,8 @@
                 <p class="card-text">2. Register</p>
                 <p class="card-text">3. Edit Profile</p>
                 <p class="card-text">3. Tampilan List Buku</p>
-                <p class="card-text">4. Peminjaman Buku</p>
-                <p class="card-text">5. Tampil List Peminjaman dan Action Pengembalian (pengembalian jenis buku sama
-                    sekalian)</p>
+                <p class="card-text">4. Peminjaman Buku </p>
+                <p class="card-text">5. Tampil List Peminjaman dan Action Pengembalian</p>
                 <p class="card-text">6. List buku admin dan jumlah</p>
                 <p class="card-text">7. edit dan add buku admin</p>
                 <p class="card-text">8. admin list user dari buku yang dipinjam</p>
