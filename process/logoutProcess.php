@@ -1,6 +1,5 @@
 <?php
-echo
-    '<script>
-    window.location = "../index.php"
-    </script>';
+    session_start();
+    session_destroy();
+    header("location:loginProcess.php")
 ?>
