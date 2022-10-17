@@ -15,10 +15,14 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
         <h4 class="mb-0">My Profile</h4>
     </div>
     <hr>
-    <form method="POST" action="../process/editProfileProcess.php" autocomplete="off">
+    <form method="POST" action="../process/editProfileProcess.php" name="contact-form" method="post"
+        enctype="multipart/form-data">
         <div class="d-flex justify-content-center align-items-center">
             <img src="../images/<?php echo $user["foto"]; ?>" width='150' height='150' class="rounded-circle " />
-
+        </div>
+        <div class="mb-4">
+            <label for="exampleInputImages" class="form-label">Gambar Profil</label>
+            <input class="form-control" type="file" name="foto" value="<?php echo htmlspecialchars($user["foto"]) ?>">
         </div>
         <div class="mb-3">
             <label for="in-name" class="form-label">Username</label>
@@ -30,9 +34,13 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
             <input class="form-control" id="in-email" name="email"
                 value="<?php echo htmlspecialchars($user["email"]); ?>" required>
         </div>
+        <div class="mb-3">
+            <label for="in-email" class="form-label">Password</label>
+            <input class="form-control" id="in-password" name="password" required>
+        </div>
         <div class="mt-4">
             <button type="submit" class="btn btn-dark w-100" name="editProfil">Save Profile</button>
-            <input type='hidden' name="id_buku" value="<?php echo $user['id'] ?>" />
+            <input type='hidden' name="id" value="<?php echo $user['id'] ?>" />
         </div>
     </form>
 </div>

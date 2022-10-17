@@ -17,14 +17,15 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                 <th scope="col">Gambar Buku </th>
                 <th scope="col">Nama Users</th>
                 <th scope="col">Status</th>
+                <th scope="col">Tanggal Pinjam</th>
                 <th scope="col">Tanggal Pengembalian</th>
-                <th scope="col">Pengembalian Buku</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $query = mysqli_query($con, "SELECT * FROM peminjaman natural join buku,user") or
+            $query = mysqli_query($con, "SELECT peminjaman.id, buku.nama_buku, buku.gambar_buku, user.nama, peminjaman.status, peminjaman.tanggal_pinjam, peminjaman.tanggal_kembali FROM ((peminjaman inner join buku ON peminjaman.id_buku = buku.id_buku) inner join user on peminjaman.id_user=user.id)
+            ") or
                 die(mysqli_error($con));
 
             if (mysqli_num_rows($query) == 0) {
@@ -42,7 +43,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                         <td>' . $data['tanggal_pinjam'] . '</td>
                         <td>' . $data['tanggal_kembali'] . '</td>
                         <td>
-                            <a href="../process/deletePeminjamanProcess.php?id=' . $data['id'] . '"onClick="return confirm ( \'Are you sure want to return the book?\')"> <i class="fa fa-book" style="color:yellow"></i>
+                            <a href="../process/deletePeminjamanProcess.php?id=' . $data['id'] . '"onClick="return confirm ( \'Are you sure want to delete?\')"> <i class="fa fa-trash" style="color:red"></i>
                             </a>
                         </td>
                     </tr>';

@@ -34,12 +34,13 @@
                 <p class="card-text">3. Edit Profile</p>
                 <p class="card-text">3. Tampilan List Buku</p>
                 <p class="card-text">4. Peminjaman Buku</p>
-                <p class="card-text">5. Tampil List Peminjaman</p>
+                <p class="card-text">5. Tampil List Peminjaman dan Action Pengembalian (pengembalian jenis buku sama
+                    sekalian)</p>
                 <p class="card-text">6. List buku admin dan jumlah</p>
                 <p class="card-text">7. edit dan add buku admin</p>
-                <p class="card-text">8. admin list buku yang dipinjam</p>
-                <p class="card-text">9. CRUD</p>
-                <p class="card-text">10. CRUD</p>
+                <p class="card-text">8. admin list user dari buku yang dipinjam</p>
+                <p class="card-text"> <strong class="text-warning">9. CRUD Anggota Belajar</strong></p>
+                <p class="card-text"><strong class="text-warning">10. CRUD Kritik & Saran</strong></p>
                 <p class="card-text">11. Logout</p>
 
             </div>
