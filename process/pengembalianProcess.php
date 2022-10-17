@@ -30,4 +30,3 @@
             window.history.back()
         </script>';
     }
-?>

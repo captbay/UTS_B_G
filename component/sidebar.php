@@ -98,10 +98,7 @@ if (!$_SESSION['isLogin']) {
                         <i class="far fa-comments"></i>
                         <a href="./kritikSaranPage.php" style="font-weight:600">&nbspKritik & Saran</a>
                     </div>
-                    <div class="content-menu">
-                        <i class="far fa-comments"></i>
-                        <a href="./adminKritikSaranPage.php" style="font-weight:600">&nbspKritik & Saran[admin]</a>
-                    </div>
+                    
                     <hr class="white">
                 </div>
                 <div class="menu">
