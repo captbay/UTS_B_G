@@ -19,16 +19,15 @@ $user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
         <img src="../images/admin.jpg" width='70' height='90' class="rounded-circle" />
         <div class="mb-3">
             <label for="in-email" class="form-label">Username</label>
-            <input class="form-control" id="in-email" name="email"
-                value="<?php echo htmlspecialchars($user["email"]); ?>" required>
+            <input class="form-control disable" id="in-email" name="email"
+                value="<?php echo htmlspecialchars($user["email"]); ?>" disabled>
         </div>
         <div class="mb-3">
             <label for="in-email" class="form-label">Password</label>
-            <input class="form-control" id="in-password" name="password"
-                value="<?php echo htmlspecialchars($user["password"]); ?>" required>
+            <input class="form-control" id="in-password" name="password" required>
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-dark w-100" name="editProfil">Save Profile</button>
+            <button type="submit" class="btn btn-dark w-100" name="editProfil">Update Profile</button>
             <input type='hidden' name="id_buku" value="<?php echo $user['id'] ?>" />
         </div>
     </form>
