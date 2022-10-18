@@ -24,7 +24,7 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
         </thead>
         <tbody>
             <?php
-            $query = mysqli_query($con, "SELECT peminjaman.id, buku.nama_buku, buku.gambar_buku, user.nama, peminjaman.status, peminjaman.tanggal_pinjam, peminjaman.tanggal_kembali FROM ((peminjaman inner join buku ON peminjaman.id_buku = buku.id_buku) inner join user on peminjaman.id_user=user.id)
+            $query = mysqli_query($con, "SELECT peminjaman.id, buku.nama_buku, buku.gambar_buku, user.nama, peminjaman.status, peminjaman.tanggal_pinjam, peminjaman.tanggal_kembali FROM ((peminjaman inner join buku ON peminjaman.id_buku = buku.id_buku) inner join user on peminjaman.id_user=user.id) where peminjaman.status='dipinjam'
             ") or
                 die(mysqli_error($con));
 
