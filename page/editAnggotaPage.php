@@ -25,7 +25,7 @@ $anggota = mysqli_fetch_assoc($query);
             <input class="form-control" type="in-name" name="email" value="<?php echo $anggota['email'] ?>">
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-dark w-100" name="editAnggota">Save Anggota</button>
+            <button type="submit" class="btn btn-dark w-100" name="editAnggota">Save Update Anggota</button>
             <input type='hidden' name="id_anggota" value="<?php echo $anggota['id_anggota'] ?>" />
         </div>
     </form>

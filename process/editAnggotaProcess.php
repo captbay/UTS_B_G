@@ -1,33 +1,32 @@
 <?php
-    session_start();
-    if(isset($_POST['editAnggota'])){
-        include ('../db.php');
-        
-        
-        $id_anggota = $_POST['id_anggota'];
-        $nama_anggota = $_POST['nama_anggota'];
-        $email = $_POST['email'];
+session_start();
+if (isset($_POST['editAnggota'])) {
+    include('../db.php');
 
-        $query = mysqli_query($con,"UPDATE anggota SET nama_anggota='$nama_anggota',email=$email WHERE id_anggota = $id_anggota");
 
-        //
-        if ($query) {
-            echo
-                '<script>
+    $id_anggota = $_POST['id_anggota'];
+    $nama_anggota = $_POST['nama_anggota'];
+    $email = $_POST['email'];
+
+    $query = mysqli_query($con, "UPDATE anggota SET anggota.nama_anggota='$nama_anggota',anggota.email='$email' WHERE anggota.id_anggota = '$id_anggota'") or die(mysqli_error($con));
+
+    //
+    if ($query) {
+        echo
+        '<script>
             alert("Edit Success");
             window.location = "../page/anggotaPage.php"
             </script>';
-            } else {
-                echo
-                '<script>
+    } else {
+        echo
+        '<script>
             alert("Edit Failed");
             window.history.back()
             </script>';
-            }
-    } else {
+    }
+} else {
     echo
     '<script>
     window.history.back()
     </script>';
-    }
-?>
+}

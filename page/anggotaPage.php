@@ -37,11 +37,11 @@ solid  #15282f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,
                         <td>' . $data['nama_anggota'] . '</td>
                         <td>' . $data['email'] . '</td>
                         <td>
-                            <a href="../page/editAnggotaPage.php?id=' . $data['id_anggota'] . '"onClick="return confirm ( \'Are you sure want to edit the book?\')"> <i class="fa fa-pen" style="color:green"></i>
+                            <a href="../page/editAnggotaPage.php?id=' . $data['id_anggota'] . '&nama=' . $data['nama_anggota'] . '&email=' . $data['email'] . '"onClick="return confirm ( \'Are you sure want to edit anggota?\')"> <i class="fa fa-pen" style="color:green"></i>
                             </a>
                         </td>
                         <td>
-                            <a href="../process/deleteAnggotaProcess.php?id=' . $data['id_anggota'] . '"onClick="return confirm ( \'Are you sure want to delete the book?\')"> <i class="fa fa-trash" style="color:red"></i>
+                            <a href="../process/deleteAnggotaProcess.php?id=' . $data['id_anggota'] . '"onClick="return confirm ( \'Are you sure want to delete ?\')"> <i class="fa fa-trash" style="color:red"></i>
                             </a>
                         </td>
                     </tr>';
